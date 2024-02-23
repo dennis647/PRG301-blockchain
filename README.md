@@ -23,6 +23,7 @@ B)
 
 For å kjøre terraform koden på egen maskin så må du gjøre følgende:
 - Først må du ha installert dockerhub og terraform på egen maskin
+- naviger til infra mappen "cd infra"
 - Kjør kommandoen "terraform init"
 - Deretter kjør "terraform apply"
 - Her skal du skrive inn passord og brukernavn til din dockerhub konto
@@ -64,5 +65,27 @@ Der namespace blir endret med brukernavnet på dockerhub og repository name i de
 "terraform import dockerhub_repository.project dennis647/nbx".
 
 Etter denne kommandoen er kjørt så er både terraform.tfstate og terraform.tfstate.backup tilbake igjen og funker som det skal.
+
+
+Oppgave 3:
+
+Når sensor lager en fork av mitt repo så er det vitkig at han går til settings på github > secrets and veriables > actions > new repository secret
+
+Her skal det lages to forskjellige repo secrets, der en er under navnet:
+
+  "DOCKER_HUB_USERNAME" 
+
+Der man skriver brukernavnet til dockerhub profilen sin og en under navnet:
+
+  "DOCKER_HUB_TOKEN" 
+
+der man skriver inn dockerhub passordet sitt. Så burde det fungere å kjøre min workflow med dockerhub kontoen.
+
+Hvis sensor ønsker å kjøre mitt container image på sin maskin så må sensor kjøre følgende kommando:
+
+"docker run -d -p 80:80 dennis647/nbx:1708698852"
+
+Grunnet til at tag'en ikke er latest, er fordi jeg hadde noen problemer med å få det til å virke. Men det fungere enda fint.
+
 
 
