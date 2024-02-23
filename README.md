@@ -38,11 +38,17 @@ Så skriver du inn "yes". Deretter burde repositoriet være opprettet.
 C)
 
 Når man kjører det for første gang så blir nbx repoet i docker opprettet, etter å ha slettet filen så får vi feilmeldingen "╷
+
 │ Error: {"message":"repository dennis647/nbx already exists","errinfo":{}}
+
 │ 
+
 │
+
 │   with dockerhub_repository.project,
+
 │   on main.tf line 17, in resource "dockerhub_repository" "project":
+
 │   17: resource "dockerhub_repository" "project" {"
 
 Denne feilmeldingen får vi siden vi allerede har opprettet ett repository i docker hub under navnet "nbx", så det er det denne feilmeldingen indikerer, siden docker hub ikke tillater å ha duplikate navn på repositorier som er innenfor den samme namespacen. 
@@ -50,6 +56,13 @@ Denne feilmeldingen får vi siden vi allerede har opprettet ett repository i doc
 For å løse dette problemet så er det noen forskjellige måter man kan løse det på. Først og fremst så pleier terraform.tfstate å lage en backup av filen som heter terraform.tfstate.backup - Som man kan bruke istedenfor. 
 
 Løsning nr 2, som er den beste løsningen for dette er bare å importere repositoriet man allerede har laget i dockerhub. Dette gjør man enkelt ved å kjøre en kommando i terminal
-"terraform import dockerhub_repository.project [NAMESPACE]/[REPOSITORY_NAME]" Der namespace blir endret med brukernavnet på dockerhub og repository name i dette tilfellet er nbx. Dermed blir det man skal skrive inn "terraform import dockerhub_repository.project dennis647/nbx". Etter denne kommandoen er kjørt så er både terraform.tfstate og terraform.tfstate.backup tilbake igjen og funker som det skal.
+
+"terraform import dockerhub_repository.project [NAMESPACE]/[REPOSITORY_NAME]" 
+
+Der namespace blir endret med brukernavnet på dockerhub og repository name i dette tilfellet er nbx. Dermed blir det man skal skrive inn 
+
+"terraform import dockerhub_repository.project dennis647/nbx".
+
+Etter denne kommandoen er kjørt så er både terraform.tfstate og terraform.tfstate.backup tilbake igjen og funker som det skal.
 
 
