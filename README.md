@@ -23,6 +23,7 @@ B)
 
 For å kjøre terraform koden på egen maskin så må du gjøre følgende:
 - Først må du ha installert dockerhub og terraform på egen maskin
+- naviger til infra mappen "cd infra"
 - Kjør kommandoen "terraform init"
 - Deretter kjør "terraform apply"
 - Her skal du skrive inn passord og brukernavn til din dockerhub konto
