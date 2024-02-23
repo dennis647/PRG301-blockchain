@@ -10,12 +10,12 @@ terraform {
 }
 
 provider "dockerhub" {
-  username = DOCKER_HUB_USERNAME
-  password = DOCKER_HUB_USERNAME
+  username = var.dockerhub_username
+  password = var.dockerhub_password
 }
 
 resource "dockerhub_repository" "project" {
-  name        = "PRG301-blockchain"
-  namespace   = "dennis647" // Endre til ditt dockerhub brukernavn
+  name        = var.repository_name
+  namespace   = var.dockerhub_username
   description = "PRG301 Konteeksamen"
 }
