@@ -15,3 +15,21 @@ Når det kommer til en arbeidsflyt der minst to personer i et team må godkjenne
 Det å jobbe flere sammen i en arbeidsflyt kan også påvirke kunnskap og erfaring blandt de som er på teamet. Siden her jobber man med en eller flere personer, dermed blir disse i laget eksponert for ulike løsninger og praksiser, noe som bidrar med å lære andre metoder og kan påvirke til mer kompetanse innad teamet. Her får man også jobbet med å forbedre samarbeid, dersom man trenger godkjenning fra andre i teamet før man merger, som oppmuntrer til eventuell diskusjon og kompromiss. Noe som kan føre til bedre beslutninger og ett sterkere samhold innad prosjektet. Liten pluss på dette er at det kan gjøre koden mer ryddig også, dersom man må ta rede for at andre på teamet skal forstå koden. Dette er noe som også kan være en ulempe med dette, dersom det øker en mulighet for konflikt. Selvom det kan være godt å diskutere, så kan dette også føre til konflikter hvis det ikke blir håndert på riktig måte.
 
 Noen andre ulemper med å jobbe i team, er blandt annet at det kan redusere utviklingshastigheten. Dersom man eventuelt må vente på godkjenninger fra en eller flere teammedlemmer, som kan gi en forsinkelse av endringer og kan muligens senke hastigheten på utviklingen. Utviklingenhastigheten kan også reduseres med tanke på at det blir litt ekstra byrde på teammedlemmene. Når de oftere må bryte arbeidsflyen for å bruke tid på å gjennomgå andres kode og i tillegg måtte jobbe på egne oppgaver, kan bli utforderne i visse situasjoner, spesielt om det er perioder med høy arbeidsbelastning.
+
+
+Oppgave 2.
+
+B)
+
+For å kjøre terraform koden på egen maskin så må du gjøre følgende:
+- Først må du ha installert dockerhub og terraform på egen maskin
+- Kjør kommandoen "terraform init"
+- Deretter kjør "terraform apply"
+- Her skal du skrive inn passord og brukernavn til din dockerhub konto
+- Når du får denne meldingen etter å ha skrevet inn brukernavn og passord:
+"Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: "
+Så skriver du inn "yes". Deretter burde repositoriet være opprettet.
