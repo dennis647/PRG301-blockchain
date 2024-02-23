@@ -1,4 +1,4 @@
-variable "dennis647" {
+variable "dennis647" { // Endre til ditt dockerhub brukernavn
   type        = string
   description = "Your Docker Hub username"
 }
