@@ -28,4 +28,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: ${{ github.ref == 'refs/heads/main' }}
-        tags: dennis647/nbx-image:latest build . --file Dockerfile --tag my-image-name:$(date +%s)
+        tags: dennis647/nbximage:latest build . --file Dockerfile --tag my-image-name:$(date +%s)
